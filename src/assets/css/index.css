@@ -43,3 +43,30 @@ section#supporter-logos {
 section#argumente {
   margin-top: -6rem;
 }
+
+/* Section 4 */
+
+
+section#komittee {
+  background-color: var(--main-color);
+  text-align: center;
+}
+
+.komittee-mitglieder {
+  display: flex;
+  margin: auto;
+  padding: 0 5rem;
+}
+
+.komittee-mitglied {
+  margin: auto 2rem;
+  text-align: left;
+}
+
+.komittee-mitglied h4 {
+  margin-bottom: -1rem;
+}
+
+.komittee-mitglied img {
+  width: 100%;
+}

@@ -78,6 +78,16 @@ section {
   color: var(--main-color);
 }
 
+/* Inputs */
+.input-field {
+  border: solid black 5px;
+  cursor: pointer;
+  font-family: Druk;
+  font-size: 1rem;
+  padding: 1rem;
+  transition: 0.5s;
+}
+
 /* Sections */
 section {
   padding: 5rem;
@@ -107,7 +117,7 @@ section {
   background-color: transparent;
   border-bottom: solid black 5px;
   display: block;
-  height: 100px;
+  height: 85px;
   top: 0;
   position: fixed;
   text-align: right;
@@ -116,7 +126,8 @@ section {
 }
 
 #open-nav {
-  margin: auto 45px;
+  margin: 45px;
+  top: 10px;
   font-size: 3.998rem;
   cursor: pointer
 }
@@ -176,4 +187,28 @@ section {
     top: 15px;
     right: 35px;
   }
+}
+
+/* Footer */
+#footer-content {
+  bottom: 0;
+  background-color: var(--main-color);
+  display: flex;
+  flex-flow: row;
+  height: 30vh;
+}
+
+.newsletter h3 {
+  margin: 1rem 0;
+}
+
+.newsletter {
+  margin: auto;
+  text-align: center;
+}
+
+#footer-credits {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  text-align: center;
 }

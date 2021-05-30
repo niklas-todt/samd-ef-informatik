@@ -8,16 +8,16 @@ import '../assets/css/index.css'
 // Step 2: Define your component
 const IndexPage = () => {
   return (
-    <Layout pageTitle="Home Page">
+    <Layout pageTitle="Zyankali fürs Volk">
       <section id="top">
         <h5>JA AM 7. MÄRZ.</h5>
-        <h1>INTERESSANTE INITATIVE.</h1>
+        <h1>ZYANKALI<br />FÜRS VOLK.</h1>
         <button type="button" className="cta-button">ARGUMENTE →</button>
         <button type="button" className="cta-button">SPENDE →</button>
       </section>
 
       <section id="supporter-logos">
-        <img src={"./assets/images/apple.svg"} />
+        <img src={"/images/apple.svg"} />
         <img src={"./assets/images/facebook.svg"} />
         <img src={"./assets/images/mcdonalds.svg"} />
         <img src={"./assets/images/google-glass-logo.svg"} />
@@ -40,6 +40,29 @@ const IndexPage = () => {
           <button type="button" className="cta-button">ZUM ARGUMENTATORIUM →</button>
         </div>
       </section>
+
+      <section id="komittee">
+      <div className="komittee-mitglieder">
+        <div className="komittee-mitglied">
+          <img src="public/logo.png" />
+          <h4>Vorname Nachname</h4>
+          <h5>Beruflich Lustig</h5>
+        </div>
+        <div className="komittee-mitglied">
+          <img src="public/logo.png" />
+          <h4>Vorname Nachname</h4>
+          <h5>Beruflich Lustig</h5>
+        </div>
+        <div className="komittee-mitglied">
+          <img src="public/logo.png" />
+          <h4>Vorname Nachname</h4>
+          <h5>Beruflich Lustig</h5>
+        </div>
+      </div>
+    </section>
+
+    <section>BLOG</section>
+
     </Layout>
   )
 }
