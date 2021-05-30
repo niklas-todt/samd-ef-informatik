@@ -1,0 +1,179 @@
+/* FontFaces */
+@font-face {
+    font-family: Druk;
+    src: url(../fonts/DrukWideBold.ttf) format('truetype');
+}
+
+/* Root */
+:root {
+  --main-color: #F9005D;
+  --secondary-color: #047BBB;
+  --third-color: #0129AA;
+}
+
+¨/* Main */
+body {
+  font-family: Playfair Display, serif;
+}
+
+h1 {
+  font-family: Druk;
+  font-size: 5.653rem;
+}
+
+h2 {
+  font-size: 3.998rem;
+}
+
+h3 {
+  font-family: Druk;
+  font-size: 2.827rem;
+}
+
+h4 {
+  font-family: Druk;
+  font-size: 1.999rem;
+}
+
+h5 {
+  font-family: Druk;
+}
+
+p {
+  font-size: 1rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Margins */
+
+body {
+  margin: 0;
+}
+
+section {
+  margin: 0;
+}
+
+/* Buttons */
+
+.cta-button {
+  background: transparent;
+  border: solid black 5px;
+  cursor: pointer;
+  font-family: Druk;
+  font-size: 1rem;
+  padding: 1rem;
+  transition: 0.5s;
+}
+
+.cta-button:hover {
+  background: black;
+  color: var(--main-color);
+}
+
+/* Sections */
+section {
+  padding: 5rem;
+}
+
+.wrap-line {
+  border: solid black 5px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.wrap-line p {
+  margin: auto;
+  margin-bottom: 2rem;
+  margin-top: -2rem;
+  width: 90%;
+}
+
+.wrap-line h3 {
+  margin-top: -0.5rem;
+}
+
+
+/* Navbar */
+
+#navbar {
+  background-color: transparent;
+  border-bottom: solid black 5px;
+  display: block;
+  height: 100px;
+  top: 0;
+  position: fixed;
+  text-align: right;
+  transition: .5s;
+  width: 100vw;
+}
+
+#open-nav {
+  margin: auto 45px;
+  font-size: 3.998rem;
+  cursor: pointer
+}
+
+#nav-overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: var(--main-color);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+#nav-overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 2.827rem;
+  font-family: Druk;
+  color: black;
+  display: block;
+  transition: 0.5s; /* Transition effects on hover (color) */
+}
+
+#nav-overlay li {
+  list-style: none;
+}
+
+#nav-overlay a:hover {
+  text-decoration: underline;
+}
+
+#nav-overlay #close-nav {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 45px;
+  font-size: 3.998rem;
+}
+
+@media screen and (max-height: 450px) {
+  #nav-overlay a {
+    font-size: 20px
+  }
+  #nav-overlay #close-nav {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}

@@ -1,0 +1,45 @@
+/* Section 1 */
+
+section#top {
+  background-image: url(/public/img1.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 20vh 5rem;
+}
+
+#top h1 {
+  color: rgba(0, 0, 0, 1);
+  -webkit-text-stroke: 5px black;
+  transition: .5s;
+}
+
+#top h1:hover {
+  color: rgba(0, 0, 0, 0);
+}
+
+#top h5 {
+  margin-bottom: -75px;
+  margin-top: 75px;
+}
+
+/* Section 2 */
+
+section#supporter-logos {
+  background-color: var(--main-color);
+  color: black;
+  display: flex;
+  height: 10vh;
+  overflow-x: scroll;
+  padding: 5vh;
+}
+
+#supporter-logos img {
+  margin: auto ;
+  height: 5vh;
+}
+
+/* Section 3 */
+
+section#argumente {
+  margin-top: -6rem;
+}
