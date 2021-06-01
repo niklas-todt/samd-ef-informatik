@@ -115,6 +115,8 @@ section {
 
 #navbar {
   background-color: transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: solid black 5px;
   display: block;
   height: 85px;
@@ -178,14 +180,25 @@ section {
   font-size: 3.998rem;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-width: 450px) {
+
   #nav-overlay a {
-    font-size: 20px
+    font-size: 1.999rem;
+    padding: 0;
   }
+
   #nav-overlay #close-nav {
     font-size: 40px;
     top: 15px;
     right: 35px;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .newsletter {
+    padding: 2rem;
   }
 }
 

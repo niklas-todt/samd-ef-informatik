@@ -70,3 +70,9 @@ section#komittee {
 .komittee-mitglied img {
   width: 100%;
 }
+
+@media screen and (max-width: 450px) {
+  .komittee-mitglieder {
+    flex-direction: column;
+    }
+  }

@@ -1,17 +1,21 @@
 // Step 1: Import React
 import * as React from 'react'
 import { Link } from 'gatsby'
+import { graphql, useStaticQuery } from "gatsby";
 import Layout from '../components/layout'
 import '../assets/css/index.css'
 
 
 // Step 2: Define your component
 const IndexPage = () => {
+
+const data = useStaticQuery(query);
+
   return (
     <Layout pageTitle="Zyankali fürs Volk">
       <section id="top">
-        <h5>JA AM 7. MÄRZ.</h5>
-        <h1>ZYANKALI<br />FÜRS VOLK.</h1>
+        <h5>{data.strapiHomepage.subtitle}</h5>
+        <h1>{data.strapiHomepage.title}</h1>
         <button type="button" className="cta-button">ARGUMENTE →</button>
         <button type="button" className="cta-button">SPENDE →</button>
       </section>
@@ -25,15 +29,15 @@ const IndexPage = () => {
 
       <section id="about">
         <div className="wrap-line">
-          <h3>DIE IDEE</h3>
-          <p>Die Initiative ‘Zyankali fürs Volk’ verlangt, dass jede*r Bürger*in der Schweiz, zu jeder Zeit an jedem Ort  freien Zugriff auf Zyankali haben soll. In jedem Laden, sowie an speziell dafür eingerichteten Stationen wird man staatlich hergestelltes und hochqualitatives Zyankali holen können.</p>
-          <button type="button" className="cta-button">JETZT UNTERSTÜZEN →</button>
+          <h3>{data.strapiHomepage.Card[0].CardTitle}</h3>
+          <p>{data.strapiHomepage.Card[0].CardText}</p>
+          <button type="button" className="cta-button">{data.strapiHomepage.Card[0].CardButton.ButtonText} →</button>
         </div>
       </section>
 
       <section id="argumente">
         <div className="wrap-line">
-          <h3>DIE ARGUMENTE</h3>
+          <h3>ARGUMENTE</h3>
           <p>1. Es fördert den Service Public der Schweiz. Mehr Arbeitsstellen werden somit staatlich geführt werden, aber auch private Firmen werden sich dafür vermarkten können. Zyankali wird somit schnell zu der Versicherung der Schweizer Wirtschaft in Krisensituationen.<br /><br />
             2. Die physische und psychische Gesundheit von Schweizer*innen wird sich massiv verbessern. Eine zufriedene und Glückliche Gesellschaft soll die Priorität unsere Regierung und des Parlament werden, mit dieser Initiative zeigen wir den Politiker*innen was die Bevölkerung wirklich will.<br /><br />
             3. Nach einer Studie der University in Appenzell, ist die Schweiz im internationalen Vergleich in der Verteilung von Zyankali an die Bevölkerung um 20 Jahre im Verzug. Wir müssen das ändern, für eine fortschrittliche und lebenswerte Zukunft.</p>
@@ -61,10 +65,31 @@ const IndexPage = () => {
       </div>
     </section>
 
-    <section>BLOG</section>
+    <section>
+    </section>
 
     </Layout>
   )
+};
+
+const query = graphql`
+query MyQuery {
+  strapiHomepage {
+    subtitle
+    title
+    Card {
+      CardText
+      CardTitle
+      CardButton {
+        ButtonText
+        Url
+      }
+    }
+  }
 }
+
+
+`;
+
 // Step 3: Export your component
 export default IndexPage
